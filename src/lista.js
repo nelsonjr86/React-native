@@ -1,5 +1,4 @@
 import uuid from 'uuid/v4';
-//const uuid = require('uuid');
 
 export default [    
     {id:uuid(), task: 'Fazer XYZ', done:false },
