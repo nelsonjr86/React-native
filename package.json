@@ -19,6 +19,7 @@
     "react-native-cli": "^2.0.1",
     "react-native-swipe-list-view": "^2.5.0",
     "react-native-uuid": "^1.4.9",
+    "redux": "^4.0.5",
     "styled-components": "^5.0.1",
     "uuid": "^7.0.3"
   },
