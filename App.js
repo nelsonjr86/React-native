@@ -1,9 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState , useEffect} from 'react';
 import styled from 'styled-components/native';
 import Header from './src/componentes/Header';
 import lista from './src/lista';
 import ListaItem from './src/componentes/ListaItem';
 import AddItemArea from './src/componentes/AddItemArea';
+import uuid from 'uuid/v4';
 
 const Page = styled.SafeAreaView`
     flex:1;
