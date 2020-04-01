@@ -2,9 +2,12 @@ import React from 'react';
 import styled from 'styled-components/native';
 
 const Item = styled.TouchableOpacity`
-    padding:10px;
     background-color:#EEE;
     flex-direction:row;
+    height:50px;
+    align-items:center;
+    padding-left:20px;
+    padding-right:20px;
 `;
 const ItemText = styled.Text`
     font-size:15px;
