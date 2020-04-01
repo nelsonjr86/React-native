@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 
-const Item = styled.TouchableOpacity`
+const Item = styled.TouchableHighlight`
     background-color:#EEE;
     flex-direction:row;
     height:50px;
@@ -23,7 +23,7 @@ const ItemCheck = styled.View`
 
 export default (props) => {
     return (
-    <Item onPress={props.onPress} activeOpacity={0.7}>
+    <Item onPress={props.onPress} underlayColor="#DDD" activeOpacity={1}>
         <>
     <ItemText>{props.data.task}</ItemText>
         <ItemCheck done={props.data.done}></ItemCheck>
