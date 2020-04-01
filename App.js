@@ -4,8 +4,8 @@ import lista from './src/lista';
 import ListaItem from './src/componentes/ListaItem';
 import AddItemArea from './src/componentes/AddItemArea';
 import uuid from 'uuid/v4';
-import { SwipeLisView } from 'react-native-swipe-list-view';
-import ListaItemSwipe from '.src/componentes/ListaItemSwipe';
+import { SwipeListView } from 'react-native-swipe-list-view';
+import ListaItemSwipe from './src/componentes/ListaItemSwipe';
 
 const Page = styled.SafeAreaView`
     flex:1;
@@ -35,21 +35,20 @@ export default () => {
 
     const deleteItem = (index) => {
       let newItems = [...items];
-      newItems = newItems.filter((it,i)=>i!index);
+      newItems = newItems.filter((it,i)=>i!=index);
       setItems(newItems);
     }
 
     return (
         <Page>
           <AddItemArea onAdd={addNewItem} />
-          <SwipeLisView 
+          <SwipeListView 
             data={items}
             renderItem={({item, index})=><ListaItem onPress={()=>toggleDone(index)} data={item} />}
             renderHiddenItem={({item, index})=><ListaItemSwipe onDelete={()=>deleteItem(index)} />}
             leftOpenValue={50}
             disableLeftSwipe={true}
             
-
             keyExtractor={(item)=>item.id}
           />  
         </Page>        
