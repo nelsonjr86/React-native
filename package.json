@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.8.1",
     "global": "^4.4.0",
     "native-base": "^2.13.12",
     "node-uuid": "^1.4.8",
