@@ -1,8 +1,4 @@
-import React, {useState , useEffect} from 'react';
-import { View } from 'react-native';
+import { createSwitchNavigator, createAppContainer } from 'react-navigation';
+import MainNavigator from './src/navigators/MainNavigator';
 
-export default () => {
-    return (
-        <View></View>       
-    );
-}
+export default createAppContainer(MainNavigator);
