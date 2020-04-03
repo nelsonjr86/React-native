@@ -9,12 +9,19 @@ const Page = styled.SafeAreaView`
 const Texto = styled.Text`
     font-size:20px;
 `;
+const Botao = styled.Button``;
 
 const Screen = (props) => {
+
+    const voltar = () => {
+        props.navigation.goBack();
+    }
+
     return (
         <Page>
             <Texto>Tela de Login</Texto>
             <Texto>Nome: {props.navigation.state.params.nome}</Texto>
+            <Botao title="voltar" onPress={voltar} />
         </Page>
     )
 }
