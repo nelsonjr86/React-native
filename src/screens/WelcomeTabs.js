@@ -64,7 +64,7 @@ Screen.navigationOptions = ({navigation}) => {
     const TabBarButton = ({ onPress }) => {
         return (
             <TabBarButtonArea onPress={onPress}>
-                <TabBarButtonText>...</TabBarButtonText>
+                <TabBarButtonText>Welcome</TabBarButtonText>
             </TabBarButtonArea>
         )
     }

@@ -1,8 +1,11 @@
-import React from 'react';
+//import React from 'react';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-import CustomTabBar from '../componentes/CustomTabBar';
+//import CustomTabBar from '../componentes/CustomTabBar';
 import Welcome from '../screens/WelcomeTabs';
 import Login from '../screens/LoginTabs';
+
+import HomeStack from '../navigators/HomeStack';
+import Config from '../screens/Config';
 
 const MainNavigator = createBottomTabNavigator({
     Welcome:{
@@ -13,8 +16,14 @@ const MainNavigator = createBottomTabNavigator({
     },
     Login:{
         screen:Login
+    },
+    Home:{
+        screen:HomeStack
+    },
+    Config:{
+        screen:Config
     }
-},{
+}/*,{
     tabBarOptions:{
         activeTintColor:'#FF0000',
         labelStyle:{
@@ -34,6 +43,6 @@ const MainNavigator = createBottomTabNavigator({
             />
         )
     }
-});
+}*/);
 
 export default MainNavigator;
