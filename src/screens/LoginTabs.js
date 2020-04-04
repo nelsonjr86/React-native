@@ -28,9 +28,9 @@ const Screen = (props) => {
 
 Screen.navigationOptions = () => {
     return {
-        title:'LoginTabs',
+        title:'Login',
         tabBarIcon:({focused, tintColor})=>{
-            return <TabBarIcon focused={focused} route="LoginTabs" badge={2} />           
+            return <TabBarIcon focused={focused} route="Login" badge={2} />           
         }      
     }
 };

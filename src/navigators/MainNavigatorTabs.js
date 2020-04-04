@@ -1,4 +1,6 @@
-import { createBottomTabNavigator } from 'react-navigation-tabs'
+import React from 'react';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+import CustomTabBar from '../componentes/CustomTabBar';
 import Welcome from '../screens/WelcomeTabs';
 import Login from '../screens/LoginTabs';
 
@@ -21,10 +23,17 @@ const MainNavigator = createBottomTabNavigator({
         labelPosition:'below-icon'
     },
     defaultNavigationOptions:{
-
+        tabBarComponent:(props)=>(
+            <CustomTabBar 
+                {...props}
+                items={[
+                    {text:'Inicio', route:'Welcome'},
+                    {text:'sobre', route:'Login'},
+                    {text:'configuraçoes', route:'Welcome'}
+                ]}
+            />
+        )
     }
-
-    
 });
 
 export default MainNavigator;

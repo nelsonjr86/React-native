@@ -25,7 +25,7 @@ const Screen = (props) => {
     const [nome, setNome] = useState('');
 
     const fazerLogin = () =>{
-        props.navigation.navigate('LoginTabs');
+        props.navigation.navigate('Login');
     }
 
     useEffect(()=>{
@@ -49,14 +49,32 @@ const Imagem = styled.Image`
     height:30px;
 `;
 
+const TabBarButtonArea = styled.TouchableOpacity`
+    flex:1;
+    height:50px;
+    background-color:#000;
+`;
+const TabBarButtonText = styled.Text`
+    color:#FFF;
+`;
+
 Screen.navigationOptions = ({navigation}) => {
     let img = null;
+
+    const TabBarButton = ({ onPress }) => {
+        return (
+            <TabBarButtonArea onPress={onPress}>
+                <TabBarButtonText>...</TabBarButtonText>
+            </TabBarButtonArea>
+        )
+    }
 
     return {
         tabBarLabel:'Bem vindo(a)',
         tabBarIcon:({focused, tintColor})=>{
             return <TabBarIcon focused={focused} route="WelcomeTabs" badge={5} />           
-        }
+        },
+        tabBarButtonComponent:(props)=><TabBarButton {...props} />
     }
 };
 
