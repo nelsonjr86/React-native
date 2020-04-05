@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import { StackActions, NavigationAction } from 'react-navigation';
+import { StackActions, NavigationActions } from 'react-navigation';
 
-const Conteiner = styled.SafeAreaView`
+const Container = styled.SafeAreaView`
     flex:1;
     background-color:#FFF;
 `;
@@ -18,22 +18,21 @@ const Page = (props) => {
         const resetAction = StackActions.reset({
             index:0,
             actions:[
-                NavigationActions.navigate('HomeTab')
+                NavigationActions.navigate({routeName:'HomeTab'})
             ]
         });
-
-        props.navigation.dispatch({routeName:'HomeTab'});
+        props.navigation.dispatch(resetAction);
     }
 
     return (
-        <Conteiner>
+        <Container>
             <Texto>Pagina de Login</Texto>
             <Botao title="Fazer Login" onPress={handleLogin} />
-        </Conteiner>
+        </Container>
     )
 }
 
-Screen.navigationOptions = () => {
+Page.navigationOptions = () => {
     return {
         title:'Login'        
     }

@@ -14,7 +14,7 @@ const Page = (props) => {
         <Container>
             <Texto>Pagina Home</Texto>
 
-            <Botao title="Fulano" onPress={()=>props.navigation.navigate('Perfil')} />
+            <Botao title="Sair" onPress={()=>props.navigation.navigate('Perfil')} />
         </Container>
     );
 }
