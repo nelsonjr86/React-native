@@ -15,6 +15,8 @@ const Page = (props) => {
             <Texto>Pagina Home</Texto>
 
             <Botao title="Fulano" onPress={()=>props.navigation.navigate('Perfil')} />
+
+            <Botao title="Abrir Drawer" onPress={()=>props.navigation.openDrawer()} />
         </Container>
     );
 }
