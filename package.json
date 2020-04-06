@@ -34,6 +34,7 @@
     "react-redux": "^7.2.0",
     "react-timer-mixin": "^0.13.4",
     "redux": "^4.0.5",
+    "redux-persist": "^6.0.0",
     "styled-components": "^5.0.1",
     "uuid": "^7.0.3"
   },

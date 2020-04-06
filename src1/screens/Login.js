@@ -40,6 +40,7 @@ const Page = (props) => {
             <Input value={props.name} onChangeText={e=>props.setName(e)} />
 
             <Texto>Nome: {props.name} </Texto>
+            <Texto>Idade: {props.idade} </Texto>
 
             <Botao title="Fazer Login" onPress={handleLogin} />
         </Container>
@@ -55,7 +56,8 @@ Page.navigationOptions = () => {
 const mapStateToProps = (state) => {
     return{
         name:state.userReducer.name,
-        email:state.userReducer.email
+        email:state.userReducer.email,
+        idade:state.userReducer.idade
     };
 };
 

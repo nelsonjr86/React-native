@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components/native';
 
 const Container = styled.SafeAreaView`
@@ -14,6 +15,8 @@ const Page = (props) => {
         <Container>
             <Texto>Pagina Home</Texto>
 
+            <Texto>Nome: {props.name} </Texto>
+
             <Botao title="Sair" onPress={()=>props.navigation.navigate('Perfil')} />
         </Container>
     );
@@ -25,4 +28,18 @@ Page.navigationOptions = () =>{
     };
 }
 
-export default Page;
+const mapStateToProps = (state) => {
+    return{
+        name:state.userReducer.name,
+        email:state.userReducer.email,
+        idade:state.userReducer.idade
+    };
+};
+
+const mapDispatchToProps = (dispatch) =>{
+    return{
+        setName:(name) => dispatch({type:'SET_NAME', payload:{name}})
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps )(Page);

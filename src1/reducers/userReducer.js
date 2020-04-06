@@ -1,6 +1,7 @@
 const initialState = {
     name:'ArquivoX',
-    email:'arquivox@teste.com'
+    email:'arquivox@teste.com',
+    idade:90
 };
 
 export default (state = initialState, action) => {
@@ -11,6 +12,9 @@ export default (state = initialState, action) => {
             break;
         case 'SET_EMAIL':
             return {...state, email:action.payload.email};
+            break;
+        case 'SET_IDADE':
+            return {...state, idade:action.payload.idade};
             break;
     }
 
