@@ -3,6 +3,7 @@ import styled from 'styled-components/native';
 
 const Container = styled.SafeAreaView`
     flex:1;
+    background-color:#FFF;
 `;
 const Texto = styled.Text`
     font-size:15px;
@@ -22,8 +23,16 @@ const Page = (props) => {
 }
 
 Page.navigationOptions = () =>{
+    const DrawerImage = styled.Image`
+        width:25px;
+        height:25px;
+    `;
+
     return{
-        title:'Home'
+        title:'Home',
+        drawerIcon:({focused, tintColor})=>(
+            <DrawerImage focused={focused?require('../images/home-action.png'):require('../images/home-black.png')} />
+        )
     };
 }
 
