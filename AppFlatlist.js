@@ -3,7 +3,6 @@ import styled from 'styled-components/native';
 import lista from './src/lista';
 import ListaItem from './src/componentes/ListaItem';
 import AddItemArea from './src/componentes/AddItemArea';
-import uuid from 'uuid/v4';
 import { SwipeListView } from 'react-native-swipe-list-view';
 import ListaItemSwipe from './src/componentes/ListaItemSwipe';
 

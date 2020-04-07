@@ -1,4 +1,4 @@
-import uuid from 'uuid/v4';
+import uuid from '../node_modules/uuid/v4';
 
 export default [    
     {id:uuid(), task: 'Fazer XYZ', done:false },
